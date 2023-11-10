@@ -7,7 +7,7 @@ package org.properties;
  * @version 0.1
  */
 public class Properties {
-    private static Boolean scalable = Boolean.valueOf(false);
+    private static Boolean scalable = Boolean.FALSE;
 
     public static Boolean getScalable() {
         return scalable;

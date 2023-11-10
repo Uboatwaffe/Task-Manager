@@ -1,6 +1,7 @@
 package org.ui;
 
 import org.properties.Properties;
+import org.ui.program.Tasks;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -26,8 +27,9 @@ public class Main extends JFrame {
     private JLabel from_what_to_choose_from;
     private JButton closeButton;
     private JLabel info_debugging;
+    private JPanel properties;
 
-    Main() {
+    public Main() {
         setContentPane(mainPanel);
         setTitle("Task Manager");
         setSize(530, 250);
@@ -43,7 +45,8 @@ public class Main extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                setVisible(false);
+                new Tasks();
             }
         });
         closeButton.addActionListener(new ActionListener() {
