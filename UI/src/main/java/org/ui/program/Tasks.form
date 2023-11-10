@@ -111,6 +111,14 @@
                   <text value="Scale"/>
                 </properties>
               </component>
+              <component id="c6acc" class="javax.swing.JButton" binding="refreshAllButton" default-binding="true">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Refresh all"/>
+                </properties>
+              </component>
               <component id="c4af" class="javax.swing.JButton" binding="closeButton" default-binding="true">
                 <constraints>
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -122,24 +130,96 @@
                   <text value="Close"/>
                 </properties>
               </component>
-              <component id="c6acc" class="javax.swing.JButton" binding="refreshAllButton" default-binding="true">
+            </children>
+          </grid>
+          <grid id="9408a" binding="homeworks" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="5" left="5" bottom="5" right="5"/>
+            <constraints>
+              <tabbedpane title="Homeworks"/>
+            </constraints>
+            <properties/>
+            <border type="bevel-raised"/>
+            <children>
+              <component id="51b49" class="javax.swing.JLabel" binding="info_hw">
                 <constraints>
-                  <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Here are all of your exams with their dates and theirs hardened scale!"/>
+                </properties>
+              </component>
+              <scrollpane id="d34a5" binding="subject_scroll_hw">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="300" height="-1"/>
+                    <preferred-size width="300" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="3c5ba" class="javax.swing.JList" binding="subject_list_hw">
+                    <constraints/>
+                    <properties>
+                      <model/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <scrollpane id="6ab4d" binding="scale_scroll_hw">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="90" height="-1"/>
+                    <maximum-size width="90" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="bf51d" class="javax.swing.JList" binding="scale_list_hw">
+                    <constraints/>
+                    <properties>
+                      <model/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="46f88" class="javax.swing.JButton" binding="closeButtonHW">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <minimum-size width="-1" height="35"/>
+                    <preferred-size width="-1" height="35"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="Close"/>
+                </properties>
+              </component>
+              <component id="b9d18" class="javax.swing.JButton" binding="refreshButtonHW">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <text value="Refresh all"/>
                 </properties>
               </component>
+              <component id="8891b" class="javax.swing.JLabel" binding="subject_hw">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Subject"/>
+                </properties>
+              </component>
+              <component id="89cb1" class="javax.swing.JLabel" binding="scale_hw">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Scale"/>
+                </properties>
+              </component>
             </children>
-          </grid>
-          <grid id="9408a" binding="homeworks" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <tabbedpane title="Homeworks"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children/>
           </grid>
           <grid id="73de0" binding="adding" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
