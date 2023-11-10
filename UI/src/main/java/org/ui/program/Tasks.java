@@ -43,6 +43,16 @@ public class Tasks extends JFrame {
     private JButton refreshButtonHW;
     private JLabel subject_hw;
     private JLabel scale_hw;
+    private JTextField subject_field_add;
+    private JTextField date_field_add;
+    private JLabel subject_label_add;
+    private JLabel date_label_add;
+    private JComboBox<String> form_comboBox_add;
+    private JLabel form_label_add;
+    private JLabel scale_label_add;
+    private JSlider scale_slider_add;
+    private JButton addButton_add;
+    private JButton closeButton_add;
 
     public Tasks() {
         setContentPane(panel);
@@ -65,6 +75,18 @@ public class Tasks extends JFrame {
         });
 
         closeButtonHW.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
+                SwingUtilities.invokeLater(org.ui.Main::new);
+            }
+        });
+        closeButton_add.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
