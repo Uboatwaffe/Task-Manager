@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI that shows tasks to user
@@ -169,7 +170,11 @@ public class Tasks extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Info();
+                try {
+                    new Info();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
     }
