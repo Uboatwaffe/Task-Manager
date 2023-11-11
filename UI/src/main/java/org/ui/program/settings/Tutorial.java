@@ -25,7 +25,7 @@ public class Tutorial extends JFrame {
     public Tutorial() {
         setContentPane(panel);
         setTitle("Task Manager");
-        setSize(530, 250);
+        setSize(730, 250);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         setResizable(UI_Properties.getScalable());

@@ -13,7 +13,7 @@ public class UI_Properties {
         return scalable;
     }
 
-    private static String languagePath = "Supply\\src\\main\\java\\bundles\\English.properties";
+    private static String languagePath = "Supply\\src\\main\\java\\bundles\\Polish.properties";
 
     public static void setScalable(Boolean scalable) {
         UI_Properties.scalable = scalable;
