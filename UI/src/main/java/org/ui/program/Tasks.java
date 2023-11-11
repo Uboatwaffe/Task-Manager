@@ -1,6 +1,7 @@
 package org.ui.program;
 
 import org.properties.Properties;
+import org.ui.program.settings.Info;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -53,15 +54,15 @@ public class Tasks extends JFrame {
     private JSlider scale_slider_add;
     private JButton addButton_add;
     private JButton closeButton_add;
-    private JComboBox comboBox_delete;
+    private JComboBox<String> comboBox_delete;
     private JButton deleteButton;
     private JButton closeButton1;
     private JLabel index_label_delete;
     private JSpinner index_spinner_delete;
     private JLabel type_label_delete;
-    private JList title_list_other;
-    private JList date_list_other;
-    private JList scale_list_other;
+    private JList<String> title_list_other;
+    private JList<String> date_list_other;
+    private JList<Integer> scale_list_other;
     private JButton refreshAllButton_other;
     private JButton closeButton_other;
     private JLabel info_label_other;
@@ -158,6 +159,17 @@ public class Tasks extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
                 new Sure("Reset", Tasks.class);
+            }
+        });
+        infoButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Info();
             }
         });
     }
