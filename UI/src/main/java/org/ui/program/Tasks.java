@@ -1,6 +1,7 @@
 package org.ui.program;
 
 import org.properties.UI_Properties;
+import org.ui.program.settings.ChangeDetails;
 import org.ui.program.settings.Credit;
 import org.ui.program.settings.Info;
 import org.ui.program.settings.Tutorial;
@@ -260,6 +261,18 @@ public class Tasks extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Tutorial();
+            }
+        });
+        changeAccountSettingsButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
+                new ChangeDetails();
             }
         });
     }
