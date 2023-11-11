@@ -159,7 +159,11 @@ public class Tasks extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
-                new Sure("Reset", Tasks.class);
+                try {
+                    new Sure("Reset", Tasks.class);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
         infoButton.addActionListener(new ActionListener() {
