@@ -1,6 +1,6 @@
 package org.ui;
 
-import org.properties.Properties;
+import org.properties.UI_Properties;
 import org.ui.program.Tasks;
 
 import javax.swing.*;
@@ -22,7 +22,7 @@ public class Main extends JFrame {
     private JPanel debugging;
     private JPanel master;
     private JButton openButton;
-    private JLabel welcome;
+    private JLabel welcome_main;
     private JLabel what_to_do;
     private JLabel from_what_to_choose_from;
     private JButton closeButton;
@@ -35,7 +35,7 @@ public class Main extends JFrame {
         setSize(530, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-        setResizable(Properties.getScalable());
+        setResizable(UI_Properties.getScalable());
 
         openButton.addActionListener(new ActionListener() {
             /**

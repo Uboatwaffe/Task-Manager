@@ -1,6 +1,6 @@
 package org.ui.program;
 
-import org.properties.Properties;
+import org.properties.UI_Properties;
 import org.ui.program.settings.Info;
 
 import javax.swing.*;
@@ -22,14 +22,14 @@ public class Tasks extends JFrame {
     private JPanel exams;
     private JPanel homeworks;
     private JPanel other;
-    private JLabel info;
+    private JLabel info_exams;
     private JList<String> subject_list;
     private JList<String> date_list;
     private JList<Integer> scale_list;
-    private JLabel subject;
-    private JLabel date;
+    private JLabel subject_exam;
+    private JLabel date_exam;
     private JButton closeButton;
-    private JLabel scale;
+    private JLabel scale_exam;
     private JButton refreshAllButton;
     private JScrollPane subject_scroll;
     private JScrollPane date_scrol;
@@ -88,7 +88,7 @@ public class Tasks extends JFrame {
         setSize(600, 270);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-        setResizable(Properties.getScalable());
+        setResizable(UI_Properties.getScalable());
         closeButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

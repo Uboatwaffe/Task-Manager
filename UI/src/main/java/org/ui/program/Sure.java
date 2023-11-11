@@ -1,6 +1,6 @@
 package org.ui.program;
 
-import org.properties.Properties;
+import org.properties.UI_Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -23,7 +23,7 @@ public class Sure extends JFrame {
         setSize(600, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-        setResizable(Properties.getScalable());
+        setResizable(UI_Properties.getScalable());
         understoodTheConsequencesButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

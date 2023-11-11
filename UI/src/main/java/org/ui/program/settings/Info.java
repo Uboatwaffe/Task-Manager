@@ -1,6 +1,6 @@
 package org.ui.program.settings;
 
-import org.properties.Properties;
+import org.properties.UI_Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -26,23 +26,18 @@ public class Info extends JFrame {
         setSize(450, 270);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-        setResizable(Properties.getScalable());
+        setResizable(UI_Properties.getScalable());
 
-        FileInputStream fis = new FileInputStream("UI\\src\\main\\java\\org\\ui\\program\\settings\\Polish.properties");
+        FileInputStream fis = new FileInputStream(UI_Properties.getLanguagePath());
 
         java.util.Properties prop = new java.util.Properties();
         prop.load(fis);
 
+        info_label.setText(prop.getProperty("you_have") + " " + 0 + " " + prop.getProperty("tasks"));
         closeButton.setText(prop.getProperty("close"));
-
-
-        /*
-        ResourceBundle rb = ResourceBundle.getBundle("Polish");
-
-        System.out.println(rb.getString("close"));
-
-         */
-
+        info_exams_label.setText(prop.getProperty("you_have") + " " + 0 + " " + prop.getProperty("exams_info") + " " + 0.1 + " " + prop.getProperty("hardness_scale"));
+        info_homework_label.setText(prop.getProperty("you_have") + " " + 0 + " " + prop.getProperty("homework_info") + " " + 0.1 + " " + prop.getProperty("hardness_scale"));
+        info_unassigend_label.setText(prop.getProperty("you_have") + " " + 0 + " " + prop.getProperty("unassigned_info") + " " + 0.1 + " " + prop.getProperty("hardness_scale"));
 
         closeButton.addActionListener(new ActionListener() {
             /**

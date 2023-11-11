@@ -1,6 +1,6 @@
 package org.ui.program;
 
-import org.properties.Properties;
+import org.properties.UI_Properties;
 import org.ui.Main;
 
 import javax.swing.*;
@@ -28,7 +28,7 @@ public class Logging_in extends JFrame {
         setSize(600, 270);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-        setResizable(Properties.getScalable());
+        setResizable(UI_Properties.getScalable());
         closeButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
