@@ -148,5 +148,17 @@ public class Tasks extends JFrame {
                 SwingUtilities.invokeLater(org.ui.Main::new);
             }
         });
+        resetButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
+                new Sure("Reset", Tasks.class);
+            }
+        });
     }
 }
