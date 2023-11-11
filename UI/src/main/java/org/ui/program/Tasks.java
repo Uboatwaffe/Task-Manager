@@ -53,6 +53,12 @@ public class Tasks extends JFrame {
     private JSlider scale_slider_add;
     private JButton addButton_add;
     private JButton closeButton_add;
+    private JComboBox comboBox_delete;
+    private JButton deleteButton;
+    private JButton closeButton1;
+    private JLabel index_label_delete;
+    private JSpinner index_spinner_delete;
+    private JLabel type_label_delete;
 
     public Tasks() {
         setContentPane(panel);
@@ -87,6 +93,18 @@ public class Tasks extends JFrame {
             }
         });
         closeButton_add.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
+                SwingUtilities.invokeLater(org.ui.Main::new);
+            }
+        });
+        closeButton1.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
