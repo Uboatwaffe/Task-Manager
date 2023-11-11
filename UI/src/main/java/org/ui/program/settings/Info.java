@@ -29,7 +29,6 @@ public class Info extends JFrame {
         setResizable(UI_Properties.getScalable());
 
         FileInputStream fis = new FileInputStream(UI_Properties.getLanguagePath());
-
         java.util.Properties prop = new java.util.Properties();
         prop.load(fis);
 
