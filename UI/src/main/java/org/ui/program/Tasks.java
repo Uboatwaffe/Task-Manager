@@ -3,6 +3,7 @@ package org.ui.program;
 import org.properties.UI_Properties;
 import org.ui.program.settings.Credit;
 import org.ui.program.settings.Info;
+import org.ui.program.settings.Tutorial;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -248,6 +249,17 @@ public class Tasks extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new Credit();
+            }
+        });
+        tutorialButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Tutorial();
             }
         });
     }

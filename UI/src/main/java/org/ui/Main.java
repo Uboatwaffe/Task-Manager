@@ -84,10 +84,6 @@ public class Main extends JFrame {
         });
     }
     public static void main(String[] args) {
-        try {
-            SwingUtilities.invokeLater(Main::new);
-        } catch (Exception ignore) {
-            ignore.printStackTrace();
-        }
+        SwingUtilities.invokeLater(Main::new);
     }
 }

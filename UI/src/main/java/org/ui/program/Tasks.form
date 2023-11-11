@@ -530,7 +530,9 @@
               </component>
               <component id="b4d51" class="javax.swing.JButton" binding="creditButton" default-binding="true">
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="80" height="86"/>
+                  </grid>
                 </constraints>
                 <properties>
                   <text value="Credit"/>
@@ -538,7 +540,9 @@
               </component>
               <component id="1fab6" class="javax.swing.JButton" binding="changeAccountSettingsButton" default-binding="true">
                 <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="186" height="86"/>
+                  </grid>
                 </constraints>
                 <properties>
                   <text value="Change account settings"/>
@@ -554,7 +558,9 @@
               </component>
               <component id="56a8" class="javax.swing.JButton" binding="changeAccountButton" default-binding="true">
                 <constraints>
-                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="139" height="86"/>
+                  </grid>
                 </constraints>
                 <properties>
                   <text value="Change account"/>
