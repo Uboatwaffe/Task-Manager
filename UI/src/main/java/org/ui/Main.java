@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 /**
  * Main class
@@ -17,7 +19,7 @@ import java.awt.event.WindowEvent;
 public class Main extends JFrame {
 
     private JPanel mainPanel;
-    private JTabbedPane Debugging;
+    private JTabbedPane tabbed;
     private JPanel start;
     private JPanel debugging;
     private JPanel master;
@@ -36,6 +38,24 @@ public class Main extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
         setResizable(UI_Properties.getScalable());
+
+        try {
+            FileInputStream fis = new FileInputStream(UI_Properties.getLanguagePath());
+            java.util.Properties prop = new java.util.Properties();
+            prop.load(fis);
+
+            welcome_main.setText(prop.getProperty("welcome_main"));
+            what_to_do.setText(prop.getProperty("what_to_do"));
+            from_what_to_choose_from.setText(prop.getProperty("from_what_to_choose_from"));
+            openButton.setText(prop.getProperty("open"));
+            closeButton.setText(prop.getProperty("close"));
+
+            tabbed.setTitleAt(0, prop.getProperty("start"));
+            tabbed.setTitleAt(1, prop.getProperty("prop"));
+            tabbed.setTitleAt(2, prop.getProperty("debugging"));
+        } catch (IOException ignore) {
+
+        }
 
         openButton.addActionListener(new ActionListener() {
             /**
@@ -63,6 +83,10 @@ public class Main extends JFrame {
         });
     }
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        try {
+            SwingUtilities.invokeLater(Main::new);
+        } catch (Exception ignore) {
+            ignore.printStackTrace();
+        }
     }
 }
