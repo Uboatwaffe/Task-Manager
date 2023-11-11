@@ -44,15 +44,16 @@ public class Main extends JFrame {
             java.util.Properties prop = new java.util.Properties();
             prop.load(fis);
 
+            tabbed.setTitleAt(0, prop.getProperty("start"));
+            tabbed.setTitleAt(1, prop.getProperty("prop"));
+            tabbed.setTitleAt(2, prop.getProperty("debugging"));
+
             welcome_main.setText(prop.getProperty("welcome_main"));
             what_to_do.setText(prop.getProperty("what_to_do"));
             from_what_to_choose_from.setText(prop.getProperty("from_what_to_choose_from"));
             openButton.setText(prop.getProperty("open"));
             closeButton.setText(prop.getProperty("close"));
 
-            tabbed.setTitleAt(0, prop.getProperty("start"));
-            tabbed.setTitleAt(1, prop.getProperty("prop"));
-            tabbed.setTitleAt(2, prop.getProperty("debugging"));
         } catch (IOException ignore) {
 
         }

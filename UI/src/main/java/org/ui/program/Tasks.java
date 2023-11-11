@@ -1,6 +1,7 @@
 package org.ui.program;
 
 import org.properties.UI_Properties;
+import org.ui.program.settings.Credit;
 import org.ui.program.settings.Info;
 
 import javax.swing.*;
@@ -236,6 +237,17 @@ public class Tasks extends JFrame {
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
+            }
+        });
+        creditButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Credit();
             }
         });
     }
