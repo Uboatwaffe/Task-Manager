@@ -46,6 +46,7 @@ public class Main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
+                // new Logging_in(); <- This will be implemented but rn for testing purposes this not in use
                 new Tasks();
             }
         });

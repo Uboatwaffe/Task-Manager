@@ -59,11 +59,31 @@ public class Tasks extends JFrame {
     private JLabel index_label_delete;
     private JSpinner index_spinner_delete;
     private JLabel type_label_delete;
+    private JList title_list_other;
+    private JList date_list_other;
+    private JList scale_list_other;
+    private JButton refreshAllButton_other;
+    private JButton closeButton_other;
+    private JLabel info_label_other;
+    private JLabel title_label_other;
+    private JLabel date_label_other;
+    private JLabel scale_label_other;
+    private JScrollPane title_scroll_other;
+    private JScrollPane scale_scroll_other;
+    private JScrollPane date_scroll_other;
+    private JPanel settings;
+    private JButton infoButton;
+    private JButton tutorialButton;
+    private JButton resetButton;
+    private JButton creditButton;
+    private JButton changeAccountSettingsButton;
+    private JButton closeButton_settings;
+    private JButton changeAccountButton;
 
     public Tasks() {
         setContentPane(panel);
         setTitle("Task Manager");
-        setSize(530, 250);
+        setSize(600, 270);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         setResizable(Properties.getScalable());
@@ -105,6 +125,18 @@ public class Tasks extends JFrame {
             }
         });
         closeButton1.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispatchEvent(new WindowEvent(Tasks.this, WindowEvent.WINDOW_CLOSING));
+                SwingUtilities.invokeLater(org.ui.Main::new);
+            }
+        });
+        closeButton_settings.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
