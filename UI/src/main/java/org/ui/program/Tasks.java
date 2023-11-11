@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
@@ -89,6 +90,62 @@ public class Tasks extends JFrame {
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         setResizable(UI_Properties.getScalable());
+
+        try {
+            FileInputStream fis = new FileInputStream(UI_Properties.getLanguagePath());
+            java.util.Properties prop = new java.util.Properties();
+            prop.load(fis);
+
+            tabs.setTitleAt(0, prop.getProperty("exam_tab"));
+            tabs.setTitleAt(1, prop.getProperty("homework_tab"));
+            tabs.setTitleAt(2, prop.getProperty("add_tab"));
+            tabs.setTitleAt(3, prop.getProperty("delete_tab"));
+            tabs.setTitleAt(4, prop.getProperty("other_tab"));
+            tabs.setTitleAt(5, prop.getProperty("settings_tab"));
+
+
+            info_exams.setText(prop.getProperty("info_exams"));
+            subject_exam.setText(prop.getProperty("subject"));
+            date_exam.setText(prop.getProperty("date"));
+            scale_exam.setText(prop.getProperty("scale"));
+            refreshAllButton.setText(prop.getProperty("refreshAllButton"));
+            closeButton.setText(prop.getProperty("close"));
+
+            info_hw.setText(prop.getProperty("info_hw"));
+            closeButtonHW.setText(prop.getProperty("close"));
+            refreshButtonHW.setText(prop.getProperty("refreshAllButton"));
+            subject_hw.setText(prop.getProperty("subject"));
+            scale_hw.setText(prop.getProperty("scale"));
+
+            subject_label_add.setText(prop.getProperty("subject_label_add"));
+            date_label_add.setText(prop.getProperty("date_label_add"));
+            form_label_add.setText(prop.getProperty("form_label_add"));
+            scale_label_add.setText(prop.getProperty("scale_label_add"));
+            addButton_add.setText(prop.getProperty("addButton"));
+            closeButton.setText(prop.getProperty("close"));
+
+            index_label_delete.setText(prop.getProperty("index_label_delete"));
+            type_label_delete.setText(prop.getProperty("type_label_delete"));
+            closeButton.setText(prop.getProperty("close"));
+            deleteButton.setText(prop.getProperty("deleteButton"));
+
+            info_label_other.setText(prop.getProperty("info_label_other"));
+            title_label_other.setText(prop.getProperty("title_label_other"));
+            date_label_other.setText(prop.getProperty("date"));
+            scale_label_other.setText(prop.getProperty("scale"));
+            refreshAllButton_other.setText(prop.getProperty("refreshAllButton"));
+            closeButton_other.setText(prop.getProperty("close"));
+
+            infoButton.setText(prop.getProperty("infoButton"));
+            tutorialButton.setText(prop.getProperty("tutorialButton"));
+            resetButton.setText(prop.getProperty("resetButton"));
+            creditButton.setText(prop.getProperty("creditButton"));
+            changeAccountSettingsButton.setText(prop.getProperty("accountSettingsButton"));
+            changeAccountButton.setText(prop.getProperty("changeAccountButton"));
+            closeButton.setText(prop.getProperty("close"));
+        } catch (IOException ignore) {
+
+        }
         closeButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
